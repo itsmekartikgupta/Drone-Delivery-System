@@ -1,14 +1,25 @@
 # Drone-Delivery-System
 This repository contains code of all the tasks concerning the Summer Research Project of "Drone Delivery Systems.
+
 Real-Time Gesture or Action Recognition
+
 --Takes several frames as input (30 videos consisting 30 frames each frame converted to an array of 1662 values for all 3 classes/actions (i.e. drone left, drone right, drone stable))
+
+
 --Mediapipe holistics used for collecting those 1662 key points(saved as NumPy arrays)
+
 --Using TensorFlow to build an LSTM model
+
 --Making predictions in Real-Time using OpenCV
+
 --Achieved a testing accuracy of 80%(could be increased to 90%)
+
 Using LSTM over CNN as -
+
 -Smaller Dataset is sufficient 
+
 -0.5 Million parameters compared to 30 Million
+
 -Faster Predictions
 
 ". 
