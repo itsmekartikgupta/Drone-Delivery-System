@@ -16,30 +16,43 @@ TensorFlow is used to build an LSTM (Long Short-Term Memory) model.
 LSTM is chosen over CNN (Convolutional Neural Network) due to the following advantages:
 
 -Smaller dataset requirement
+
 -Significantly fewer parameters (0.5 Million compared to 30 Million in CNN)
+
 -Faster predictions
+
 Real-time prediction: OpenCV is utilized to make predictions in real-time. The trained LSTM model is used to classify the gestures or actions captured from the live video feed.
 
-## Accuracy and improvement: The model achieved a testing accuracy of more than 80%, with potential for further improvement up to 90%.
+## Accuracy and improvement: The model achieved a testing accuracy of more than 90%, with potential for further improvement.
 
 ## Getting Started
 To run the code and reproduce the results, follow these steps:
 
 Clone the repository: git clone https://github.com/[your-username]/drone-gesture-recognition.git
+
 Install the required dependencies: using the pip install cell of the notebook
+
 Collect the input frames using the Mediapipe Holistics library and save them as NumPy arrays.
+
 Train the LSTM model using the collected data.
+
 Run the real-time prediction script using OpenCV.
+
 Feel free to explore the code and modify it according to your requirements.
 
 ## Contributing
 If you would like to contribute to this project, please follow these steps:
 
 Fork the repository.
+
 Create a new branch: git checkout -b feature/my-feature.
+
 Make your changes and commit them: git commit -m 'Add some feature'.
+
 Push to the branch: git push origin feature/my-feature.
+
 Submit a pull request.
+
 Your contributions are highly appreciated!
 
 ## License
