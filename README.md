@@ -1,26 +1,49 @@
-# Drone-Delivery-System
-This repository contains code of all the tasks concerning the Summer Research Project of "Drone Delivery Systems.
+##Drone Delivery Systems - Real-Time Gesture or Action Recognition
+This repository contains the code for the Summer Research Project on "Drone Delivery Systems" related to Real-Time Gesture or Action Recognition.
 
-Real-Time Gesture or Action Recognition
+#Overview
+The goal of this project is to recognize and classify gestures or actions in real-time using a deep learning model. The project involves the following tasks:
 
---Takes several frames as input (30 videos consisting 30 frames each frame converted to an array of 1662 values for all 3 classes/actions (i.e. drone left, drone right, drone stable))
+Collecting input frames: The system takes several frames as input, where each frame is a video consisting of 30 frames. Each frame is converted into an array of 1662 values, representing the key points of the gestures or actions (i.e., drone left, drone right, drone stable).
 
+Data collection: Mediapipe Holistics is used to collect the 1662 key points from the input frames. These key points are then saved as NumPy arrays for further processing.
 
---Mediapipe holistics used for collecting those 1662 key points(saved as NumPy arrays)
+Model development: TensorFlow is used to build an LSTM (Long Short-Term Memory) model. LSTM is chosen over CNN (Convolutional Neural Network) due to the following advantages:
 
---Using TensorFlow to build an LSTM model
+Smaller dataset requirement
+Significantly fewer parameters (0.5 Million compared to 30 Million in CNN)
+Faster predictions
+Real-time prediction: OpenCV is utilized to make predictions in real-time. The trained LSTM model is used to classify the gestures or actions captured from the live video feed.
 
---Making predictions in Real-Time using OpenCV
+#Accuracy and improvement: The model achieved a testing accuracy of 80%, with potential for further improvement up to 90%.
 
---Achieved a testing accuracy of 80%(could be increased to 90%)
+#Getting Started
+To run the code and reproduce the results, follow these steps:
 
-Using LSTM over CNN as -
+Clone the repository: git clone https://github.com/[your-username]/drone-gesture-recognition.git
+Install the required dependencies: using the pip install cell of the notebook
+Collect the input frames using the Mediapipe Holistics library and save them as NumPy arrays.
+Train the LSTM model using the collected data.
+Run the real-time prediction script using OpenCV.
+Feel free to explore the code and modify it according to your requirements.
 
--Smaller Dataset is sufficient 
+Contributing
+If you would like to contribute to this project, please follow these steps:
 
--0.5 Million parameters compared to 30 Million
+Fork the repository.
+Create a new branch: git checkout -b feature/my-feature.
+Make your changes and commit them: git commit -m 'Add some feature'.
+Push to the branch: git push origin feature/my-feature.
+Submit a pull request.
+Your contributions are highly appreciated!
 
--Faster Predictions
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+We would like to express our gratitude to the mentors and contributors for their guidance and support throughout this project.
+
+If you have any questions or suggestions, please feel free to contact us.
 
 ". 
 ![drone_output_2](https://user-images.githubusercontent.com/80156877/200922584-c66acd0a-43e8-4f55-91b2-9e13e6460e2a.png)
